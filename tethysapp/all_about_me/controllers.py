@@ -72,3 +72,12 @@ def home(request):
     }
 
     return render(request, 'all_about_me/home.html', context)
+
+@login_required()
+def map(request):
+    """
+    Controller for the Add Dam page.
+    """
+
+    context = {}
+    return render(request, 'all_about_me/map.html', context)
