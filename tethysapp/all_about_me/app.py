@@ -29,6 +29,11 @@ class AllAboutMe(TethysAppBase):
                 url='all-about-me',
                 controller='all_about_me.controllers.home'
             ),
+            UrlMap(
+                name='map',
+                url='all_about_me/map',
+                controller='all_about_me.controllers.map'
+            ),
         )
 
         return url_maps
