@@ -13,6 +13,11 @@
 {% block app_title %}{{ tethys_app.name }}{% endblock %}
 
 {% block app_navigation_items %}
+  
+{% url 'all_about_me:home' as home_url %}
+{% url 'all_about_me:map' as map_url %}
+
+
   <li class="title">App Navigation</li>
   <li class="active"><a href="">Home</a></li>
   <li><a href="">Jobs</a></li>
