@@ -1,0 +1,91 @@
+{% extends "all_about_me/base.html" %}
+{% load tethys_gizmos %}
+
+{% block header_buttons %}
+  <div class="header-button glyphicon-button" data-toggle="tooltip" data-placement="bottom" title="Help">
+    <a data-toggle="modal" data-target="#help-modal"><span class="glyphicon glyphicon-question-sign"></span></a>
+  </div>
+{% endblock %}
+
+
+
+
+
+{% block app_content %}
+  <h1>Welcome to the "All About Me" App!</h1>
+  <h5>By: Michael Stevens</h5><br>
+  <h2>About Me</h2>
+  <hr class="solid">
+  <div>
+      <img class="imgleft bigpic" src="https://scontent-lax3-1.xx.fbcdn.net/v/t31.0-8/p960x960/15591401_950203878412841_8363523745642875740_o.jpg?_nc_cat=100&_nc_sid=7aed08&_nc_ohc=awM5FcTA38wAX8kDq9q&_nc_ht=scontent-lax3-1.xx&_nc_tp=6&oh=3774bcf6e1cdf3eee453d725d79f6a46&oe=5E84E6AA" alt="A picture of me">
+      <br><br><br>
+      <h3>My name is Michael. I love basketball, food, and my family. This page gives a brief introduction to me.
+        </h3>
+    </div>
+<br>
+<hr class="solid">
+<br>
+<br>
+
+  <div class="nwidth">
+    <img src="http://ontheworldmap.com/usa/city/colorado-springs/colorado-springs-location-on-the-us-map.jpg" alt="Colorado Springs on a map">
+    <p>I am from Colorado Springs, CO, home of Pike's Peak, the Air Force Academy, and lots of outdoor adventures. I grew up there from age 7 until I left for college.</p>
+  </div>
+
+ <div class="nwidth">
+    <img class="imgleft" src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-0/p640x640/83038710_10156630710621837_7819636287681331200_o.jpg?_nc_cat=102&_nc_sid=e007fa&_nc_ohc=HWrmjKghvS4AX-ojCC8&_nc_ht=scontent-lax3-1.xx&_nc_tp=6&oh=5000219d37f627976de2dd82f05b2646&oe=5E966BAE" alt="My sister's wedding" >
+    <p>I come from a family of 7 kids: I have 2 brothers and 4 sisters. 2 of my sisters have gotten married in the past year, with a third getting married this May.
+      </p>
+    </div>
+  <div class="nwidth">
+    <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t31.0-0/p206x206/13243917_798930836873480_356247556544645622_o.jpg?_nc_cat=109&_nc_sid=7aed08&_nc_ohc=uu1jQer6i_gAX_RfokA&_nc_ht=scontent-lax3-1.xx&_nc_tp=6&oh=12d59a64c6e79e80b622a202a49c1b4b&oe=5E973C3A" alt="Returning from my mission">
+    <p>I have been at BYU since 2013, but served a mission in Pennsylvania from 2014-2016. My mission was life-changing, and I feel its effects every single day.<br>
+      </p>
+    </div>
+  <div class="nwidth">
+    <img class="imgleft imgcrop" src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/s960x960/49667055_1766513370117588_6863025347193995264_o.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_ohc=vVvG7IRnh7kAX_BGAe_&_nc_ht=scontent-lax3-1.xx&_nc_tp=7&oh=2a7b05045a273781835ab643e85c23cc&oe=5EBC5ACB" alt="Colorado Springs on a map">
+    <p>I met my wife through some friends from high school (yes, set-ups do sometimes work!). We were married in 2017 and enjoy sports, hiking, traveling, and watching movies.<br>
+      </p>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}
+
+
+
+
+
+{# Use the after_app_content block for modals #}
+{% block after_app_content %}
+  <!-- Example Modal -->
+  <div class="modal fade" id="help-modal" tabindex="-1" role="dialog" aria-labelledby="help-modal-label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h5 class="modal-title" id="help-modal-label">Example Modal</h5>
+        </div>
+        <div class="modal-body">
+          <p>You can add custom buttons to the app header using the <code>header_buttons</code> block. Use anchor/link tags for the button and wrap it in a div with the class <code>header-button</code>. For buttons with the gliphyicons, add the <code>glyphicon-button</code> class as well.</p>
+          <p>Ever have trouble using a modal in a Tethys app? Use the <code>after_app_content</code> block for modal content to allow them to function properly. See: <a href="https://getbootstrap.com/javascript/#modals">Bootstrap Modals</a></p>
+          <p>Add tooltips to any element by adding the <code>data-toggle</code>, <code>data-placement</code>, and <code>title</code> attributes to the button. See: <a href="https://getbootstrap.com/javascript/#tooltips">Bootstrap Tooltips</a></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block app_actions %}
+  {% gizmo save_button %}
+  {% gizmo edit_button %}
+  {% gizmo remove_button %}
+  {% gizmo previous_button %}
+  {% gizmo next_button %}
+{% endblock %}

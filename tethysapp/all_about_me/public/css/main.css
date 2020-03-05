@@ -1,0 +1,47 @@
+h2{
+    font-family: Lobster, cursive;
+    text-align: center;
+}
+h3{
+    font-family: Georgia;
+    text-align: center;
+    vertical-align: middle;
+}
+div{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+.nwidth{
+    width: 49%;
+}
+img{
+    border-radius: 5px;
+    position: relative;
+    object-fit: contain;
+    height: 200px;
+    float: right;
+    margin: 5px;
+}
+.bigpic{
+    height: 300px;
+}
+.imgleft{
+    float: left;
+}
+.imgcrop{
+    object-fit: cover;
+    width: 150px;
+}
+p{
+    position: relative;
+    font-family: Times New Roman;
+    font-size: 115%;
+}
+.align_right{
+    text-align: right;
+}
+hr.solid{
+    border-top: 1px solid #bbb;
+
+}
